@@ -316,7 +316,7 @@ def uninstall_drive():
 
 def version_decrement(version):
     """Guess the lower version of the one given."""
-
+    print(f">>>>>>>>> version: {map(int, version.split('.'))}")
     major, minor, patch, *dev = map(int, version.split("."))
 
     if dev:

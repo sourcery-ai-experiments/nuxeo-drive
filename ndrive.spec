@@ -61,7 +61,7 @@ if sys.platform == "win32":
     properties_rc = tools + "\\windows\\properties.rc"
     if os.path.isfile(properties_rc):
         os.remove(properties_rc)
-
+    print(f">>>>>>>>> version_tuple: {tuple(map(int, version.split(".") + [0] * (3 - version.count("."))))})
     version_tuple = tuple(map(int, version.split(".") + [0] * (3 - version.count("."))))
 
     with open(properties_tpl, encoding="utf-8") as tpl, open(
